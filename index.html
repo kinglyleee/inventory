@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Laptop Inventory</title>
+</head>
+<body>
+    <h1>Laptop Details</h1>
+    <p><strong>Usage:</strong> <span id="usage"></span></p>
+    <p><strong>Type:</strong> <span id="type"></span></p>
+    <p><strong>Device Name:</strong> <span id="deviceName"></span></p>
+
+    <script>
+      // Function to get the value of a query parameter from the URL
+      function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+      }
+
+      // Retrieve values from query parameters
+      var Usage = getQueryParam('Usage');
+      var Type = getQueryParam('Type');
+      var DeviceName = getQueryParam('DeviceName');
+
+      // Populate placeholders with values
+      document.getElementById('usage').textContent = Usage;
+      document.getElementById('type').textContent = Type;
+      document.getElementById('deviceName').textContent = DeviceName;
+    </script>
+</body>
+</html>
